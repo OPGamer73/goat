@@ -1,4 +1,5 @@
 {
+    "main": "you-win first.js",
 "dependencies": {
     "you-win": "0.1.4"
 }
