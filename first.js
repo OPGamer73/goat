@@ -26,6 +26,7 @@ var cloud = new Sprite
 cloud.costume = "⛅"
 cloud.opacity = 1
 cloud.angle = 0
+cloud.scale = 3
 cloud.flipped = false
 cloud.posX = uw.randomInt(0, world.width)
 cloud.posY = uw.randomInt(0, world.height)
