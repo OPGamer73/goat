@@ -9,7 +9,6 @@ var world = new World()
 world.title = ""
 world.background = "lightblue"
 
-// Now we can start making Sprites!
 world.width = 415
 world.height = 460
 var player = new Sprite()
@@ -20,20 +19,34 @@ player.angle = 0
 player.flipped = false
 player.posX = uw.randomInt(50, world.width - 50)
 player.posY = uw.randomInt(100, world.height)
+
+function addcloud (){
+
+var cloud = new Sprite
+cloud.costume = "⛅"
+cloud.opacity = 1
+cloud.angle = 0
+cloud.flipped = false
+cloud.posX = uw.randomInt(0, world.width)
+cloud.posY = uw.randomInt(0, world.height)
+}
+var cloudInterval = setInterval(addcloud, uw.randomInt(1000, 5000))
+
 var touchedEnemy = false
+var bounced = false
 function addbomb() {
   var enemy = new Sprite()
   enemy.costume = "💣"
   enemy.scale = 0.1
   enemy.posX = uw.randomInt(0, world.width)
   enemy.posY = uw.randomInt(0, world.height)
-
   function explode() {
     enemy.costume = "💥"
     enemy.scale = 2
     enemy.angle = 1
     exploded = true
   }
+
 
   var goingRight = true
   var angle = 0
@@ -72,15 +85,34 @@ var bombInterval = setInterval(addbomb, uw.randomInt(2000, 10000))
 var score = 0
 var scoreLabel = new Text()
 var gameover = new Text()
+//var debugText = new Text()
+//debugText.posY = 390
+//debugText.text = "debug"
 var speedY = 0
 var speedX = -2
 var goat = new Text()
 goat.text = "goat"
 
-// function addTornado() {
-//   var tornado = new Sprite()
-//   tornado.costume = "🌪️"
-// }
+function addTornado() {
+  //debugText.text = "tornado"
+  var tornado = new Sprite()
+
+  //tornado.costume = "🌪️"
+  tornado.costume = "🌀"
+  tornado.posY = world.height / 2
+  tornado.posX = world.width
+  tornado.forever(() => {
+    tornado.posY = 230
+    tornado.posX -= 10
+    if (tornado.isTouching(player)) {
+      speedY += 0.8
+
+    }
+  })
+  }
+
+var tornadospawn = setInterval(addTornado, uw.randomInt(1000, 3000) )
+
 function addbirb() {
   var birb = new Sprite()
   birb.costume = "🦅"
@@ -137,6 +169,8 @@ player.forever(() => {
     gameover.text = "High Score: " + highscore
     clearInterval(bombInterval)
     clearInterval(birbInterval)
+    clearInterval(tornadospawn)
+    clearInterval(cloudInterval)
     var button = new Rect()
     button.width = 150
     button.height = 40
