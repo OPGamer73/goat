@@ -1,6 +1,26 @@
 {
-    "main": "you-win first.js",
-"dependencies": {
+  "main": "you-win first.js",
+  "dependencies": {
     "you-win": "0.1.4"
-}
+  },
+  "name": "goat",
+  "version": "1.0.0",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "you-win first.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/OPGamer73/goat.git"
+  },
+  "author": "OPGamer73",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/OPGamer73/goat/issues"
+  },
+  "homepage": "https://github.com/OPGamer73/goat#readme",
+  "description": "",
+  "engines": {
+    "node": "14.x"
+  }
 }
