@@ -101,16 +101,16 @@ function addTornado() {
   //debugText.text = "tornado"
   var tornado = new Sprite()
 
-  //tornado.costume = "🌪️"
-  tornado.costume = "🌀"
+  // tornado.costume = "🌪️"
+   tornado.costume = "🌀"
   tornado.posY = world.height / 2
   tornado.posX = world.width
   tornado.forever(() => {
     tornado.posY = 230
     tornado.posX -= 10
     if (tornado.isTouching(player)) {
-      speedY = uw.randomInt(1, 10)
-speedX = uw.randomInt(1, 10)
+      speedY = uw.randomInt(1, 5)
+speedX = uw.randomInt(1, 5)
     }
   })
   }
