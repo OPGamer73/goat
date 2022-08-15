@@ -110,7 +110,7 @@ function addTornado() {
     tornado.posX -= 10
     if (tornado.isTouching(player)) {
       speedY = uw.randomInt(1, 5)
-speedX = uw.randomInt(1, 5)
+speedX = uw.randomInt(0.1, 10)
     }
   })
   }
@@ -152,6 +152,7 @@ player.forever(() => {
     speedX = -speedX
     player.right = world.width
     score += 1
+    goat.text = ""
     player.flipped = false
     scoreLabel.text = "score: " + score
   }
