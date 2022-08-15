@@ -12,7 +12,7 @@ world.background = "lightblue"
 world.width = 415
 world.height = 460
 var player = new Sprite()
-player.costume = "🐏"
+player.costume = "🦆"
 player.scale = 3.0
 player.opacity = 1
 player.angle = 0
@@ -95,7 +95,7 @@ var gameover = new Text()
 var speedY = 0
 var speedX = -2
 var goat = new Text()
-goat.text = "goat"
+goat.text = "duck"
 
 function addTornado() {
   //debugText.text = "tornado"
