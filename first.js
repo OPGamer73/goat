@@ -33,6 +33,9 @@ cloud.posY = uw.randomInt(0, world.height)
 }
 var cloudInterval = setInterval(addcloud, uw.randomInt(1000, 5000))
 
+// uw.loadSound('baah', '')
+
+
 var touchedEnemy = false
 var bounced = false
 function addbomb() {
@@ -106,8 +109,8 @@ function addTornado() {
     tornado.posY = 230
     tornado.posX -= 10
     if (tornado.isTouching(player)) {
-      speedY += 0.8
-
+      speedY = uw.randomInt(1, 10)
+speedX = uw.randomInt(1, 10)
     }
   })
   }
