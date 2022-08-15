@@ -131,7 +131,7 @@ function addbirb() {
   })
 }
 
-var birbInterval = setInterval(addbirb, uw.randomInt(5000, 15000))
+var birbInterval = setInterval(addbirb, uw.randomInt(1000, 5000))
 player.forever(() => {
   if (player.left <= 0) {
     score += 1
