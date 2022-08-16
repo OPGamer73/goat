@@ -131,18 +131,17 @@ function addbirb() {
   })
 }
 
-var birbInterval = setInterval(addbirb, uw.randomInt(5000, 10000))
+var birbInterval = setInterval(addbirb, uw.randomInt(10000, 15000))
+
 // function addrain (){
 // var rain = new Sprite
 // raincostume = "💧"
 // rain.posY = uw.randomInt(0, world.height)
 // rain.posX = uw.randomInt(0, world.width)
-// birb.posY -= 10
-// birb.posX = 207.5
 // }
 
 
-var rainInterval = setInterval(addrain, uw.randomInt(1000, 5000))
+// var rainInterval = setInterval(addrain, uw.randomInt(100, 500))
 
 
 
