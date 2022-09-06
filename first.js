@@ -110,7 +110,6 @@ function addTornado() {
     tornado.posX -= 10
     if (tornado.isTouching(player)) {
       speedY = uw.randomInt(1, 5)
-speedX = uw.randomInt(0.1, 10)
     }
   })
   }
